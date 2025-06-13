@@ -2,7 +2,8 @@ package cmd
 
 import "github.com/spf13/cobra"
 
-var Commands = map[string]*cobra.Command{
-	"hello":     HelloCmd,
-	"show-time": TimeCmd,
+var RegisteredCommands []*cobra.Command
+
+func Register(cmd *cobra.Command) {
+	RegisteredCommands = append(RegisteredCommands, cmd)
 }

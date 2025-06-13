@@ -15,3 +15,7 @@ var TimeCmd = &cobra.Command{
 		fmt.Println("Current Time", currentTime)
 	},
 }
+
+func init() {
+	Register(TimeCmd)
+}

@@ -13,3 +13,7 @@ var HelloCmd = &cobra.Command{
 		fmt.Println("Hello from shared CLI!")
 	},
 }
+
+func init() {
+	Register(HelloCmd)
+}
